@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cont = true;
+        let arrayName = [];
+        let arrayAge = [];
+
+        do {
+            const name = prompt('Digite seu nome');
+            const age = parseInt(prompt('Digite sua idade'));
+
+            if (name === 'Fim') {
+                cont = false;
+            } else {
+                arrayName.push(name);
+                arrayAge.push(age);
+            }
+        } while (cont);
+
+        const orderedIndices = arrayAge.map((_, index) => index).sort((a, b) => arrayAge[a] - arrayAge[b]);
+        const orderedList = orderedIndices.map(index => arrayAge[index]);
+
+        const up60Age = orderedList.filter((age) => age > 60);
+        const ate59Age = orderedList.filter((age) => age < 59);
+
+        alert('Maiores que 60 : '+ up60Age + '\n' + 'Menores que 59 : '+ ate59Age);
+        alert();
+    </script>
+</body>
+</html>
