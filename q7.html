@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const valueCoin = parseFloat(prompt('Digite um valor'))
+         const dolar = 5.50
+         const euro = 7.00
+         const typeCoin = prompt('Digite  um tipo de moeda, d:dolar,e:euro')
+        
+         const convertType = (value,type) => {
+         if(type === 'd'){
+                alert(`${(value/dolar).toFixed(2)}$`) 
+         }
+         else if (type === 'e'){
+                alert(`${(value/euro).toFixed(2)}€`)
+         }
+         else {
+            alert('Error contate o administrador')
+         }
+         }
+        convertType(valueCoin,typeCoin)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const valueIncomeClient = parseFloat(prompt('Digite sua renda'))
+         const valuePortion = parseFloat(prompt('Digite o valor da parcela'))
+         const verifyCondition = (value,parcel) =>{
+             let limit = 30
+             let valueAuthorization = (value * limit)/100
+             if(parcel <= valueAuthorization){
+                alert('Emprestimo Aprovado')
+             }
+             else {
+                alert('Emprestimento Reprovado')
+             }
+         }
+        verifyCondition(valueIncomeClient,valuePortion)
+    </script>
+</body>
+</html>
